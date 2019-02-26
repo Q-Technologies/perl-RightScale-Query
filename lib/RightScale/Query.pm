@@ -10,12 +10,12 @@ package RightScale::Query;
 Query the RightScale service for information about server instances.  It can be used
 to query for other objects, but at this stage it only provides a helper function to find server instances
 
-    use RightScale;
+    use RightScale::Query;
 
     # Package Globals
-    $RightScale::api_url = 'https://us-4.rightscale.com/api';
-    $RightScale::internet_proxy = 'http://proxy.example.com';
-    $RightScale::internet_proxy_timeout = 30;
+    $RightScale::Query::api_url = 'https://us-4.rightscale.com/api';
+    $RightScale::Query::internet_proxy = 'http://proxy.example.com';
+    $RightScale::Query::internet_proxy_timeout = 30;
 
     # Get an access token
     my $refresh_token = 'afd983762efabcd9823209cbdefa9819832dcbea';
@@ -40,15 +40,15 @@ require Exporter;
 
 =head1 GLOBAL VARIABLES
 
-C<$RightScale::api_url> needs to be set to match the URL of the RightScale API.
+C<$RightScale::Query::api_url> needs to be set to match the URL of the RightScale API.
 
 These variables can be set if you need to pass through a proxy (these are passed to L<LWP::UserAgent>):
 
 =over
 
-=item * C<RightScale::internet_proxy> - The hostname of the proxy server
+=item * C<RightScale::Query::internet_proxy> - The hostname of the proxy server
 
-=item * C<RightScale::internet_proxy_timeout> - The proxy timeout
+=item * C<RightScale::Query::internet_proxy_timeout> - The proxy timeout
 
 =back 
 
