@@ -4,7 +4,7 @@ RightScale::Query - Query RightScale for server instances
 
 # VERSION
 
-version 0.001
+version 0.200
 
 # SYNOPSIS
 
